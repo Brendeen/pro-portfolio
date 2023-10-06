@@ -18,23 +18,36 @@
 
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-<body class="bg-gray-100 font-sans">
+<body class="bg-black font-sans">
 
-<header class="bg-black text-white relative py-4">
-    <div class="container mx-auto flex flex-col justify-center items-center relative">
-        <h1 class="text-3xl font-bold">Brenden's Portfolio</h1>
-        <!-- Button in top right corner -->
-        <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 absolute top-4 right-4" type="button" data-drawer-target="drawer-top-example" data-drawer-show="drawer-top-example" data-drawer-placement="top" aria-controls="drawer-top-example">
-            Sections
-        </button>
+
+<!--icon link-->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@master/ci.min.css"
+/>
+
+<header class="relative">
+
+    <img src="{% static 'images/seattle.jpeg' %}" alt="Seattle background image" class="w-full h-auto">
+
+    <div class="absolute inset-0 flex justify-center items-center">
+        <div class="bg-black bg-opacity-80 p-36 w-1/2 rounded-3xl">
+            <h1 class="text-center text-6xl font-bold text-white">Brenden Moore</h1>
+            <p class="text-center text-3xl font-bold text-white">| Software Developer |</p>
+        </div>
     </div>
+
+    <!-- Button in top right corner -->
+    <button class="text-white bg-black hover:bg-gray-800 focus:ring-4 focus:ring-black font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 absolute top-4 right-4" type="button" data-drawer-target="drawer-top-example" data-drawer-show="drawer-top-example" data-drawer-placement="top" aria-controls="drawer-top-example">
+        Sections
+    </button>
 </header>
 
-<!--    &lt;!&ndash; Background image &ndash;&gt;-->
-<!--    <img src="{% static 'images/mountains.jpeg' %}" alt="Your Image" class="absolute inset-0 w-full h-full object-cover" style="z-index: -1;">-->
+
 
 <!-- drawer component -->
-<div id="drawer-top-example" class="flex justify-center fixed top-0 left-0 right-0 z-40 w-full p-4 transition-transform -translate-y-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-top-label">
+<div id="drawer-top-example" class="flex justify-center fixed top-0 left-0 right-0 z-40 w-full p-4 transition-transform -translate-y-full bg-black dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-top-label">
     <h5 id="drawer-top-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"><svg class="w-4 h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
   </svg></h5>
     <button type="button" data-drawer-hide="drawer-top-example" aria-controls="drawer-top-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
@@ -47,6 +60,32 @@
    <a href="{% url 'home' %}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Projects</a>
     <a href="{% url 'contact' %}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Contact</a>
 </div>
+
+<main class="container mx-auto mt-6 p-4 bg-black  border-white border-t-2">
+    <img src="{% static 'images/bren.jpg' %}" alt="Brenden headshot" class="flex mx-auto my-auto rounded-full w-36">
+    <h2 class="text-2xl font-semibold text-center mb-4 text-white pt-6">Hi, I'm Brenden</h2>
+    <p class="text-white text-center pt-6">
+        I'm a full-stack developer located in Washington state, with a wide background of frameworks and languages.
+        I want to incorporate my passion for design into my code to make user-friendly apps and websites. As someone who
+        has always had a lot of creativity, code was the perfect place for me! After graduating from high school, I wasn't
+        sure what to do with my life. I decided to save up money, buy a car, and pursue a greater education. I found
+        Code Fellows Bootcamp, and clicked with coding immediately. Code is the perfect place to express my creativity.
+    </p>
+</main>
+
+<footer class="bg-gray-800 text-white py-4 text-center">
+    <p>&copy; 2023 Brenden's Portfolio</p>
+    <i class="ci ci-linkedin ci-2x"></i>
+    <i class="ci ci-instagram ci-2x"></i>
+    <i class="ci ci-python ci-2x"></i>
+    <i class="ci ci-javascript ci-2x"></i>
+    <i class="ci ci-docker ci-2x"></i>
+    <i class="ci ci-node ci-2x"></i>
+    <i class="ci ci-nextjs ci-2x"></i>
+    <i class="ci ci-django ci-2x"></i>
+    <i class="ci ci-discord ci-2x"></i>
+    <i class="ci ci-gmail ci-2x"></i>
+</footer>
 
 {% block content %}
 {% endblock content %}
