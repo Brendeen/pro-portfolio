@@ -27,6 +27,7 @@
   href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@master/ci.min.css"
 />
 
+
 <header class="relative">
 
     <img src="{% static 'images/seattle.jpeg' %}" alt="Seattle background image" class="w-full h-auto">
@@ -39,11 +40,11 @@
     </div>
 
     <!-- Button in top right corner -->
-    <button class="text-white bg-black hover:bg-gray-800 focus:ring-4 focus:ring-black font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 absolute top-4 right-4" type="button" data-drawer-target="drawer-top-example" data-drawer-show="drawer-top-example" data-drawer-placement="top" aria-controls="drawer-top-example">
-        Sections
+    <button class="text-white bg-black hover:bg-gray-800 ring-white focus:ring-2 ring-white focus:ring-opacity-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 fixed top-4 right-4" type="button" data-drawer-target="drawer-top-example" data-drawer-show="drawer-top-example" data-drawer-placement="top" aria-controls="drawer-top-example">
+    &lt;/&gt;
     </button>
-</header>
 
+</header>
 
 
 <!-- drawer component -->
@@ -56,12 +57,17 @@
       </svg>
       <span class="sr-only">Close menu</span>
    </button>
-   <a href="{% url 'home' %}" class="px-4 py-2 mr-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">About</a>
-   <a href="{% url 'home' %}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Projects</a>
-    <a href="{% url 'contact' %}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Contact</a>
+   <div class="flex space-x-4">
+       <p class="text-white bold text-lg top-4 left-4">Menu</p>
+       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">About</a>
+       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Projects</a>
+       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Experience</a>
+       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Contact</a>
+   </div>
 </div>
 
-<main class="container mx-auto mt-6 p-4 bg-black  border-white border-t-2">
+<!--about-->
+<section class="container mx-auto mt-6 p-4 bg-black  border-white border-t-2 border-b-2">
     <img src="{% static 'images/bren.jpg' %}" alt="Brenden headshot" class="flex mx-auto my-auto rounded-full w-36">
     <h2 class="text-2xl font-semibold text-center mb-4 text-white pt-6">Hi, I'm Brenden</h2>
     <p class="text-white text-center pt-6">
@@ -71,20 +77,28 @@
         sure what to do with my life. I decided to save up money, buy a car, and pursue a greater education. I found
         Code Fellows Bootcamp, and clicked with coding immediately. Code is the perfect place to express my creativity.
     </p>
-</main>
+</section>
 
+<!--experience-->
+<section class="container mx-auto mt-6 p-4 bg-black  border-white border-b-2">
+    <h2 class="text-2xl font-semibold text-center mb-4 text-white pt-6">Experience</h2>
+    <i class="ci ci-python ci-2x"></i>
+    <i class="ci ci-html5 ci-2x"></i>
+    <i class="ci ci-css3 ci-2x"></i>
+    <i class="ci ci-reactjs ci-2x"></i>
+    <i class="ci ci-nextjs ci-2x"></i>
+    <i class="ci ci-node ci-2x"></i>
+    <i class="ci ci-django ci-2x"></i>
+    <i class="ci ci-git ci-2x"></i>
+</section>
+
+<!--footer-->
 <footer class="bg-gray-800 text-white py-4 text-center">
     <p>&copy; 2023 Brenden's Portfolio</p>
     <i class="ci ci-linkedin ci-2x"></i>
     <i class="ci ci-instagram ci-2x"></i>
-    <i class="ci ci-python ci-2x"></i>
-    <i class="ci ci-javascript ci-2x"></i>
-    <i class="ci ci-docker ci-2x"></i>
-    <i class="ci ci-node ci-2x"></i>
-    <i class="ci ci-nextjs ci-2x"></i>
-    <i class="ci ci-django ci-2x"></i>
-    <i class="ci ci-discord ci-2x"></i>
     <i class="ci ci-gmail ci-2x"></i>
+    <i class="ci ci-discord ci-2x"></i>
 </footer>
 
 {% block content %}
