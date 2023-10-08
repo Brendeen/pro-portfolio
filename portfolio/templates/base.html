@@ -40,7 +40,7 @@
     </div>
 
     <!-- Button in top right corner -->
-    <button class="text-white bg-black hover:bg-gray-800 ring-white focus:ring-2 ring-white focus:ring-opacity-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 fixed top-4 right-4" type="button" data-drawer-target="drawer-top-example" data-drawer-show="drawer-top-example" data-drawer-placement="top" aria-controls="drawer-top-example">
+    <button class="text-white bg-black hover:bg-gray-800 border-2 border-white focus:ring-2 ring-red-400 focus:border-red-400 focus:ring-opacity-100 font-medium rounded-lg text-sm px-5 py-2.5 fixed top-4 right-4" type="button" data-drawer-target="drawer-top-example" data-drawer-show="drawer-top-example" data-drawer-placement="top" aria-controls="drawer-top-example">
     &lt;/&gt;
     </button>
 
@@ -48,10 +48,10 @@
 
 
 <!-- drawer component -->
-<div id="drawer-top-example" class="flex justify-center fixed top-0 left-0 right-0 z-40 w-full p-4 transition-transform -translate-y-full bg-black dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-top-label">
+<section id="drawer-top-example" class="flex justify-center fixed top-0 left-0 right-0 z-40 w-full p-4 transition-transform -translate-y-full bg-black dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-top-label">
     <h5 id="drawer-top-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"><svg class="w-4 h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
   </svg></h5>
-    <button type="button" data-drawer-hide="drawer-top-example" aria-controls="drawer-top-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
+    <button type="button" data-drawer-hide="drawer-top-example" aria-controls="drawer-top-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center" >
       <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
       </svg>
@@ -59,18 +59,20 @@
    </button>
    <div class="flex space-x-4">
        <p class="text-white bold text-lg top-4 left-4">Menu</p>
-       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">About</a>
-       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Projects</a>
-       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Experience</a>
-       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Contact</a>
+       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">About</a>
+       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Projects</a>
+       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Experience</a>
+       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Contact</a>
    </div>
-</div>
+</section>
+
 
 <!--about-->
-<section class="container mx-auto mt-6 p-4 bg-black  border-white border-t-2 border-b-2">
-    <img src="{% static 'images/bren.jpg' %}" alt="Brenden headshot" class="flex mx-auto my-auto rounded-full w-36">
-    <h2 class="text-2xl font-semibold text-center mb-4 text-white pt-6">Hi, I'm Brenden</h2>
-    <p class="text-white text-center pt-6">
+<h2 class="text-2xl font-semibold text-center underline mt-24 text-white pt-6">About</h2>
+<section class="container mx-auto mt-16 mb-48 p-4 bg-black border-white border-t-2 border-b-2">
+    <img src="{% static 'images/bren.jpg' %}" alt="Brenden headshot" class="flex mx-auto my-auto rounded-full mt-8 w-36">
+    <h2 class="text-2xl font-semibold text-center mt-8 text-white">Hi, I'm Brenden</h2>
+    <p class="text-white text-center pt-6 mb-14">
         I'm a full-stack developer located in Washington state, with a wide background of frameworks and languages.
         I want to incorporate my passion for design into my code to make user-friendly apps and websites. As someone who
         has always had a lot of creativity, code was the perfect place for me! After graduating from high school, I wasn't
@@ -79,18 +81,99 @@
     </p>
 </section>
 
+
 <!--experience-->
-<section class="container mx-auto mt-6 p-4 bg-black  border-white border-b-2">
-    <h2 class="text-2xl font-semibold text-center mb-4 text-white pt-6">Experience</h2>
-    <i class="ci ci-python ci-2x"></i>
-    <i class="ci ci-html5 ci-2x"></i>
-    <i class="ci ci-css3 ci-2x"></i>
-    <i class="ci ci-reactjs ci-2x"></i>
-    <i class="ci ci-nextjs ci-2x"></i>
-    <i class="ci ci-node ci-2x"></i>
-    <i class="ci ci-django ci-2x"></i>
-    <i class="ci ci-git ci-2x"></i>
+<section class="container mx-auto mt-24 mb-24 p-4 bg-black">
+    <h2 class="text-2xl font-semibold text-center underline mb-24 text-white pt-6">Experience</h2>
+    <div class="grid grid-cols-2 gap-6 md:grid-cols-5 mb-20">
+        <!-- Layer 1: Top Row -->
+        <div class="text-center mb-4">
+            <i class="ci ci-python ci-4x hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2"></i>
+            <p class="mt-2 text-white">Python</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <img src="{% static 'images/js.png' %}" alt="Javascript logo" class="w-16 h-16 mx-auto hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2">
+            <p class="mt-2 text-white">JavaScript</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <i class="ci ci-html5 ci-4x hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2"></i>
+            <p class="mt-2 text-white">HTML5</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <i class="ci ci-css3 ci-4x hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2"></i>
+            <p class="mt-2 text-white">CSS3</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <i class="ci ci-reactjs ci-4x hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2"></i>
+            <p class="mt-2 text-white">ReactJS</p>
+        </div>
+
+        <!-- Layer 2: Middle Row -->
+        <div class="text-center mb-4">
+            <i class="ci ci-nextjs ci-4x hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2"></i>
+            <p class="mt-2 text-white">Next.js</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <i class="ci ci-node ci-4x hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2"></i>
+            <p class="mt-2 text-white">Node.js</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <i class="ci ci-django ci-4x hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2"></i>
+            <p class="mt-2 text-white">Django</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <img src="{% static 'images/github.png' %}" alt="Github logo" class="w-18 h-16 mx-auto hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2">
+            <p class="mt-2 text-white">Github</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <i class="ci ci-git ci-4x hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2"></i>
+            <p class="mt-2 text-white">Git</p>
+        </div>
+
+        <!-- Layer 3: Bottom row -->
+        <div class="text-center mb-4">
+            <i class="ci ci-vercel ci-4x hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2"></i>
+            <p class="mt-2 text-white">Vercel</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <i class="ci ci-netlify ci-4x hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2"></i>
+            <p class="mt-2 text-white">Netlify</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <i class="ci ci-postgres ci-4x hover:animate-bounce animate-duration-500 bg-white rounded-lg p-2"></i>
+            <p class="mt-2 text-white">Postgres</p>
+        </div>
+
+<!--        write jupyter notebooks here too-->
+    </div>
 </section>
+
+
+<!--contact-->
+<section>
+    <h2 class="text-2xl font-semibold text-center underline mb-24 text-white pt-6">Contact</h2>
+
+    <label for="message" class="block mb-2 text-sm font-medium text-white">Your Name</label>
+    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Name..."></textarea>
+
+    <label for="message" class="block mb-2 text-sm font-medium text-white">Your Email</label>
+    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Email..."></textarea>
+
+    <label for="message" class="block mb-2 text-sm font-medium text-white">Your Message</label>
+    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Message..."></textarea>
+
+</section>
+
 
 <!--footer-->
 <footer class="bg-gray-800 text-white py-4 text-center">
@@ -100,6 +183,10 @@
     <i class="ci ci-gmail ci-2x"></i>
     <i class="ci ci-discord ci-2x"></i>
 </footer>
+
+
+<!--credit too https://github.com/dheereshagrwal/colored-icons for icons-->
+
 
 {% block content %}
 {% endblock content %}
