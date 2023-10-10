@@ -1,0 +1,40 @@
+@keyframes drop-down-fade-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-drop-down-fade-in {
+    animation: drop-down-fade-in 1s ease-out forwards;
+    animation-delay: 0.2s; /* Delay for the drop-down effect */
+}
+
+.animate-drop-down-fade-in-p {
+    animation: drop-down-fade-in 1s ease-out forwards;
+    animation-delay: 0.8s; /* Delay for the drop-down effect */
+}
+
+/* Initially set both elements to be transparent */
+h1.animate-drop-down-fade-in,
+p.animate-drop-down-fade-in {
+    opacity: 0;
+}
+
+.expand-on-hover {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Apply transition to the transform property */
+}
+
+/* Apply the hover effect */
+.expand-on-hover:hover {
+    transform: scale(1.1); /* Scale the element on hover (you can adjust the scale factor) */
+}
+
+html {
+    scroll-behavior: smooth;
+}
