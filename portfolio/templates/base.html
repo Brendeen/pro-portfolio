@@ -10,6 +10,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     <title>Brenden's Portfolio</title>
 
     {% compress css %}
@@ -33,11 +34,13 @@
     <img src="{% static 'images/seattle.jpeg' %}" alt="Seattle background image" class="w-full h-auto">
 
     <div class="absolute inset-0 flex justify-center items-center">
-        <div class="bg-black bg-opacity-80 p-36 w-1/2 rounded-3xl">
-            <h1 class="text-center text-6xl font-bold text-white">Brenden Moore</h1>
-            <p class="text-center text-3xl font-bold text-white">| Software Developer |</p>
-        </div>
+    <div class="bg-black bg-opacity-80 p-36 w-1/2 rounded-3xl">
+        <h1 class="text-center text-6xl font-bold text-white animate-drop-down-fade-in">Brenden Moore</h1>
+        <p class="text-center text-3xl font-bold opacity-0 text-white animate-drop-down-fade-in-p">| Software Developer |</p>
     </div>
+</div>
+
+
 
     <!-- Button in top right corner -->
     <button class="text-white bg-black hover:bg-gray-800 border-2 border-white focus:ring-2 ring-red-400 focus:border-red-400 focus:ring-opacity-100 font-medium rounded-lg text-sm px-5 py-2.5 fixed top-4 right-4" type="button" data-drawer-target="drawer-top-example" data-drawer-show="drawer-top-example" data-drawer-placement="top" aria-controls="drawer-top-example">
@@ -59,18 +62,18 @@
    </button>
    <div class="flex space-x-4">
        <p class="text-white bold text-lg top-4 left-4">Menu</p>
-       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">About</a>
-       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Projects</a>
-       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Experience</a>
-       <a href="{% url 'home' %}" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Contact</a>
+       <a href="#about" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">About</a>
+       <a href="#projects" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Projects</a>
+       <a href="#experience" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Experience</a>
+       <a href="#contact" class="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-300 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-red-400">Contact</a>
    </div>
 </section>
 
 
 <!--about-->
-<h2 class="text-2xl font-semibold text-center underline mt-24 text-white pt-6">About</h2>
+<h2 id="about" class="text-2xl font-semibold text-center underline mt-24 text-white pt-6">About</h2>
 <section class="container mx-auto mt-16 mb-48 p-4 bg-black border-white border-t-2 border-b-2">
-    <img src="{% static 'images/bren.jpg' %}" alt="Brenden headshot" class="flex mx-auto my-auto rounded-full mt-8 w-36">
+    <img src="{% static 'images/bren.jpg' %}" alt="Brenden headshot" class="flex mx-auto my-auto rounded-full mt-8 w-36 expand-on-hover">
     <h2 class="text-2xl font-semibold text-center mt-8 text-white">Hi, I'm Brenden</h2>
     <p class="text-white text-center pt-6">
         I'm a full-stack developer located in Washington state, with a wide background of frameworks and languages.
@@ -92,85 +95,92 @@
 </section>
 
 
+<!--projects-->
+<section class="container mx-auto mt-24 mb-24 p-4 bg-black">
+    <h2 id="projects" class="text-2xl font-semibold text-center underline mb-24 text-white pt-6">Projects</h2>
+
+</section>
+
+
 <!--experience-->
 <section class="container mx-auto mt-24 mb-24 p-4 bg-black">
-    <h2 class="text-2xl font-semibold text-center underline mb-24 text-white pt-6">Experience</h2>
+    <h2 id="experience" class="text-2xl font-semibold text-center underline mb-24 text-white pt-6">Experience</h2>
     <div class="grid grid-cols-2 gap-6 md:grid-cols-5 mb-20">
         <!-- Layer 1: Top Row -->
         <div class="text-center mb-4">
-            <i class="ci ci-python ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-python ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">Python</p>
         </div>
 
         <div class="text-center mb-4">
-            <img src="{% static 'images/js.png' %}" alt="Javascript logo" class="w-16 h-16 mx-auto bg-white rounded-lg p-2">
+            <img src="{% static 'images/js.png' %}" alt="Javascript logo" class="w-16 h-16 mx-auto bg-white rounded-lg p-2 expand-on-hover">
             <p class="mt-2 text-white">JavaScript</p>
         </div>
 
         <div class="text-center mb-4">
-            <i class="ci ci-html5 ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-html5 ci-4x bg-white rounded-lg p-2 expand-on-hover expand-on-hover"></i>
             <p class="mt-2 text-white">HTML5</p>
         </div>
 
         <div class="text-center mb-4">
-            <i class="ci ci-css3 ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-css3 ci-4x bg-white rounded-lg p-2 expand-on-hover expand-on-hover"></i>
             <p class="mt-2 text-white">CSS3</p>
         </div>
 
         <div class="text-center mb-4">
-            <i class="ci ci-reactjs ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-reactjs ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">ReactJS</p>
         </div>
 
         <!-- Layer 2: Middle Row -->
         <div class="text-center mb-4">
-            <i class="ci ci-nextjs ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-nextjs ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">Next.js</p>
         </div>
 
         <div class="text-center mb-4">
-            <i class="ci ci-node ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-node ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">Node.js</p>
         </div>
 
         <div class="text-center mb-4">
-            <i class="ci ci-django ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-django ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">Django</p>
         </div>
 
         <div class="text-center mb-4">
-            <img src="{% static 'images/github.png' %}" alt="Github logo" class="w-18 h-16 mx-auto bg-white rounded-lg p-2">
+            <img src="{% static 'images/github.png' %}" alt="Github logo" class="w-18 h-16 mx-auto bg-white rounded-lg p-2 expand-on-hover">
             <p class="mt-2 text-white">Github</p>
         </div>
 
         <div class="text-center mb-4">
-            <i class="ci ci-git ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-git ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">Git</p>
         </div>
 
         <!-- Layer 3: Bottom row -->
         <div class="text-center mb-4">
-            <i class="ci ci-vercel ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-vercel ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">Vercel</p>
         </div>
 
         <div class="text-center mb-4">
-            <i class="ci ci-netlify ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-netlify ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">Netlify</p>
         </div>
 
         <div class="text-center mb-4">
-            <i class="ci ci-postgres ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-postgres ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">Postgres</p>
         </div>
 
         <div class="text-center mb-4">
-            <i class="ci ci-figma ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-figma ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">Figma</p>
         </div>
 
         <div class="text-center mb-4">
-            <i class="ci ci-tailwind ci-4x bg-white rounded-lg p-2"></i>
+            <i class="ci ci-tailwind ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">Tailwind</p>
         </div>
 
@@ -180,8 +190,8 @@
 
 
 <!--contact-->
-<section>
-    <h2 class="text-2xl font-semibold text-center underline mb-24 text-white pt-6">Contact</h2>
+<section class="container mx-auto mt-24 mb-24 p-4 bg-black">
+    <h2 id="contact" class="text-2xl font-semibold text-center underline mb-24 text-white pt-6">Contact</h2>
 
     <label for="message" class="block mb-2 text-sm font-medium text-white">Your Name</label>
     <textarea id="name" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Name..."></textarea>
