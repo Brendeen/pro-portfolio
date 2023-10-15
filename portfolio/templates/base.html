@@ -29,9 +29,9 @@
 />
 
 
-<header class="relative">
+<header id="top" class="relative">
 
-    <img src="{% static 'images/seattle.jpeg' %}" alt="Seattle background image" class="w-full h-auto">
+    <img src="{% static 'images/lights.jpg' %}" alt="Seattle background image" class="w-full" style="height: 800px;">
 
     <div class="absolute inset-0 flex justify-center items-center">
     <div class="bg-black bg-opacity-80 p-36 w-1/2 rounded-3xl">
@@ -49,6 +49,7 @@
 
 </header>
 
+<p class="text-white text-center pt-6">Picture taken by me at Sensorio Paso in California</p>
 
 <!-- drawer component -->
 <section id="drawer-top-example" class="flex justify-center fixed top-0 left-0 right-0 z-40 w-full p-4 transition-transform -translate-y-full bg-black dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-top-label">
@@ -98,7 +99,9 @@
 <!--projects-->
 <section class="container mx-auto mt-24 mb-24 p-4 bg-black">
     <h2 id="projects" class="text-2xl font-semibold text-center underline mb-24 text-white pt-6">Projects</h2>
+    <div class="">
 
+    </div>
 </section>
 
 
@@ -191,27 +194,47 @@
 
 <!--contact-->
 <section class="container mx-auto mt-24 mb-24 p-4 bg-black">
-    <h2 id="contact" class="text-2xl font-semibold text-center underline mb-24 text-white pt-6">Contact</h2>
+    <h2 id="contact" class="text-2xl font-semibold text-center underline mb-8 text-white pt-6">Contact</h2>
 
-    <label for="message" class="block mb-2 text-sm font-medium text-white">Your Name</label>
-    <textarea id="name" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Name..."></textarea>
+    <div class="flex mb-8">
+        <div class="w-1/2 pr-4">
+            <label for="name" class="block mb-2 text-sm font-medium text-white">Your Name</label>
+            <textarea id="name" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Name..."></textarea>
 
-    <label for="message" class="block mb-2 text-sm font-medium text-white">Your Email</label>
-    <textarea id="email" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Email..."></textarea>
+            <label for="email" class="block mt-4 mb-2 text-sm font-medium text-white">Your Email</label>
+            <textarea id="email" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Email..."></textarea>
 
-    <label for="message" class="block mb-2 text-sm font-medium text-white">Your Message</label>
-    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Message..."></textarea>
+            <label for="message" class="block mt-4 mb-2 text-sm font-medium text-white">Your Message</label>
+            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Message..."></textarea>
+        </div>
 
+        <div class="w-1/2 pl-4">
+            <h3 class="text-xl font-semibold text-center text-white">Where to reach me...</h3>
+
+            <div class="flex justify-center">
+                <a href="https://www.linkedin.com/in/brenden-moore2023/" class="expand-on-hover">
+                    <i class="ci ci-linkedin ci-2x mr-4"></i>
+                </a>
+                <a href="https://github.com/Brendeen" class="expand-on-hover">
+                    <img src="{% static 'images/github.png' %}" alt="Github logo" class="w-14 h-14 rounded-full">
+                </a>
+                <a href="mailto:youremail@example.com" class="expand-on-hover">
+                    <i class="ci ci-gmail ci-2x mr-4"></i>
+                </a>
+                <a href="https://discord.gg/your-server" class="expand-on-hover">
+                    <i class="ci ci-discord ci-2x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
 
+
 <!--footer-->
-<footer class="bg-gray-800 text-white py-4 text-center">
-    <p>&copy; 2023 Brenden's Portfolio</p>
-    <i class="ci ci-linkedin ci-2x"></i>
-    <i class="ci ci-instagram ci-2x"></i>
-    <i class="ci ci-gmail ci-2x"></i>
-    <i class="ci ci-discord ci-2x"></i>
+<footer class="bg-gray-800 text-white py-4 text-center flex justify-center">
+    <p class="text-white">&copy; 2023 Brenden's Portfolio</p>
+    <a href="#top" class="text-white bg-black hover:bg-gray-800 border-2 border-white focus:ring-2 rounded-2xl p-2">Back to top</a>
 </footer>
 
 
