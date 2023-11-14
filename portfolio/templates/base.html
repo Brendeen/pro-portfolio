@@ -127,13 +127,15 @@
                 VVT is still a work in progress, with new features being implemented and reworked.
             </p>
             <p class="text-white mb-4 text-center">
-                Full stack web application made with Next.Js and Node.js, styled using Tailwind css and deployed using Postgres.
+                Full stack web application made with Next.Js and Django Rest framework, styled using Tailwind css and
+                deployed using Postgres.
             </p>
             <div class="flex justify-center">
                 <div class="flex justify-evenly bg-white rounded mb-4 w-3/4 h-auto">
                     <i class="ci ci-python ci-4x bg-white rounded-lg p-2"></i>
                     <i class="ci ci-nextjs ci-4x bg-white rounded-lg p-2"></i>
-                    <i class="ci ci-nodejs ci-4x bg-white rounded-lg p-2"></i>
+                    <i class="ci ci-django ci-4x bg-white rounded-lg p-2"></i>
+                    <i class="ci ci-tailwind ci-4x bg-white rounded-lg p-2"></i>
                     <i class="ci ci-postgres ci-4x bg-white rounded-lg p-2"></i>
                 </div>
             </div>
@@ -336,8 +338,12 @@
             <i class="ci ci-tailwind ci-4x bg-white rounded-lg p-2 expand-on-hover"></i>
             <p class="mt-2 text-white">Tailwind</p>
         </div>
-<!--        write jupyter notebooks here too-->
+<!-- write jupyter notebooks here too -->
     </div>
+    <!-- Resume link -->
+    <p class="text-white mb-4 text-center">
+        Check out my full resume | <a href="{% static 'Brenden Moore - Resume.pdf' %}" class="text-blue-400 underline hover:text-blue-500">here</a> |
+    </p>
 </section>
 
 
@@ -346,6 +352,7 @@
     <h2 id="contact" class="text-2xl font-semibold text-center underline mb-8 text-white pt-6">Contact</h2>
 
     <div class="flex mb-8">
+
         <div class="w-1/2 pr-4">
             <label for="name" class="block mb-2 text-sm font-medium text-white">Your Name</label>
             <textarea id="name" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Name..."></textarea>
@@ -359,29 +366,23 @@
 
         <div class="w-1/2 pl-4">
             <h3 class="text-xl font-semibold text-center text-white mb-12">Where to reach me...</h3>
-
-            <div class="flex justify-evenly gap-6 mb-12">
-                <a href="https://www.linkedin.com/in/brenden-moore2023/" class="expand-on-hover inline-block">
-                    <i class="ci ci-linkedin ci-3x mr-2"></i>
+            <div class="flex flex-col items-center mb-2 md:mb-0 md:mr-8">
+                <a href="https://www.linkedin.com/in/brenden-moore2023/" class="expand-on-hover inline-block" title="LinkedIn Profile">
+                    <i class="ci ci-linkedin ci-3x mb-4"></i>
                 </a>
-                <a href="https://github.com/Brendeen" class="expand-on-hover inline-block">
-                    <img src="{% static 'images/github.png' %}" alt="Github logo" class="w-16 h-16 rounded-full">
+                <a href="https://github.com/Brendeen" class="expand-on-hover inline-block" title="GitHub Profile">
+                    <img src="{% static 'images/github.png' %}" alt="Github logo" class="w-16 h-16 rounded-full mb-4">
                 </a>
-            </div>
-            <div class="flex justify-evenly gap-6">
-                <a href="mailto:youremail@example.com" class="expand-on-hover inline-block">
-                    <i class="ci ci-gmail ci-3x mr-2"></i>
+                <a href="https://www.instagram.com/brenden._.moore/" class="expand-on-hover inline-block" title="Instagram">
+                    <i class="ci ci-instagram ci-3x mb-4"></i>
                 </a>
-                <a href="https://discord.gg/your-server" class="expand-on-hover inline-block">
-                    <i class="ci ci-discord ci-3x"></i>
+                <a href="https://discord.gg/your-server" class="expand-on-hover inline-block" title="Discord Server">
+                    <i class="ci ci-discord ci-3x mb-4"></i>
                 </a>
             </div>
-
-
-
-
-
         </div>
+        <!--<img src="{% static 'images/brenden.jpg' %}" alt="Brenden headshot" class="flex rounded w-1/2 mx-auto">-->
+
     </div>
 </section>
 
