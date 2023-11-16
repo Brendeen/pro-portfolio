@@ -1224,18 +1224,6 @@ input:checked + .toggle-bg {
   margin-top: 2rem;
 }
 
-.ml-6 {
-  margin-left: 1.5rem;
-}
-
-.ml-24 {
-  margin-left: 6rem;
-}
-
-.ml-28 {
-  margin-left: 7rem;
-}
-
 .block {
   display: block;
 }
@@ -2097,9 +2085,5 @@ input:checked + .toggle-bg {
 
   .md\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .md\:flex-row {
-    flex-direction: row;
   }
 }
