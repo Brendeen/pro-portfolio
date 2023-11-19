@@ -349,6 +349,10 @@
 <!--contact-->
 <section class="container mx-auto mt-24 mb-24 p-4 bg-black">
     <h2 id="contact" class="text-2xl font-semibold text-center underline mb-8 text-white pt-6">Contact</h2>
+    <div class="flex justify-evenly mb-6">
+        <h3 class="text-xl font-semibold text-white mx-auto">Reach out!</h3>
+        <h3 class="text-xl font-semibold text-white mx-auto">Where to find me...</h3>
+    </div>
 
     <div class="flex mb-8">
 
@@ -363,8 +367,7 @@
             <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Message..."></textarea>
         </div>
 
-        <div class="w-1/2 pl-4">
-            <h3 class="text-xl font-semibold text-center text-white mb-12">Where to reach me...</h3>
+        <div class="w-1/2 pl-4 flex justify-center">
             <div class="flex flex-col items-center mb-2 md:mb-0 md:mr-8">
                 <a href="https://www.linkedin.com/in/brenden-moore2023/" class="expand-on-hover inline-block" title="LinkedIn Profile">
                     <i class="ci ci-linkedin ci-3x mb-4"></i>
@@ -382,8 +385,12 @@
                     <i class="ci ci-spotify ci-3x mb-4"></i>
                 </a>
             </div>
+            <div class="flex rounded w-1/2">
+                <img src="{% static 'images/brenden.jpg' %}" alt="Brenden headshot">
+            </div>
         </div>
-        <!--<img src="{% static 'images/brenden.jpg' %}" alt="Brenden headshot" class="flex rounded w-1/2 mx-auto">-->
+
+
 
     </div>
 </section>
@@ -391,7 +398,7 @@
 
 
 <!--footer-->
-<footer class="bg-black  text-white py-4 bt-white border-t-2">
+<footer class="bg-black text-white py-4 bt-white border-t-2">
     <div class="container mx-auto flex justify-between items-center">
         <p class="text-white">&copy; 2023 Brenden's Portfolio</p>
         <a href="#top" class="text-white bg-black hover:bg-gray-800 border-2 border-white focus:ring-2 rounded-2xl p-2">
